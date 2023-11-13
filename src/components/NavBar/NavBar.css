@@ -1,0 +1,160 @@
+/* General styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family:  'ADLaM Display', cursive;
+}
+
+/* NavBar styles */
+.NavBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--background-color);
+  padding: 10px 10px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900;
+}
+.nav-btn{
+  width: 35px;
+  position: absolute;
+  right: 2rem;
+  top: 1rem;
+  display: none;
+  cursor: pointer;
+
+}
+
+.nav-btn .hamburger{
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.nav-btn .close {
+  position: absolute;
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  transform: rotate(45deg);
+  transition: 0.4s;
+}
+
+.nav-btn .close:nth-child(2) {
+  transform: rotate(-45deg);
+}
+
+
+
+  /* Default NavItems styles (for desktop) */
+  .NavItems {
+    display: inline;
+    margin: 10px 20px;
+    padding-left: 10rem;
+  }
+  
+  .NavItems a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    margin: 0px 15px;
+  }
+  
+  .NavItems a:hover {
+    color: #86797c;
+  }
+  .nav-logo {
+    width: 150px;
+    height: auto;
+    top: 7%; /* Adjust as needed for vertical positioning */
+    left: 0; /* Adjust as needed for horizontal positioning */
+   
+  }
+  
+  @media(max-width: 45rem) {
+    .nav-btn{
+      display:block ;
+      z-index: 2;
+      cursor: pointer;
+    }
+    
+    .nav-btn .hamburger {
+      transition: none;
+    }
+    .NavItems {
+      display: none;
+    }
+    .NavItems a{
+      display: block;
+      width: 150px;
+      height: 1.5rem;
+      padding: 10px 0;
+      z-index: 1;
+      top: 40px;
+      text-align: left;
+    }
+    
+    .open .NavItems {
+      display: flex; 
+      z-index: 1;
+      flex-direction: column;
+      position: absolute; 
+      padding-top: 120px;
+      padding-right: 70px;
+      top: -10px;
+      right: -20px;
+      width: 84%; /* Cover the entire width */
+      height: 100%; /* Cover the entire height */
+      background-image: linear-gradient(
+        -225deg,
+        #504a4c 67%,
+        #555357 100%
+      );
+      background-size: 75% ; 
+      background-repeat: no-repeat;
+      justify-content: flex-start;
+  }
+  
+   
+    
+   
+    .nav-logo {
+    
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    }
+    .open .nav-logo{
+      width: 180px; 
+    }
+  
+    .nav-logo img {
+      width: 150px;
+      height: auto; /* Set a height for the logo image */
+    }
+
+    .goto{
+      display: none;
+    }
+    .open .goto {
+      display: block;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 93%; /* Adjust this percentage to your preference */
+      height: 49%; /* Adjust this percentage to your preference */
+      
+      
+    }
+    
+  }
+    
+    
+    
